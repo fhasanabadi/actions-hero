@@ -16,8 +16,6 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            My comment
-      - name: Check outputs
-        run: |
-          echo "Comment ID - ${{ steps.couc.outputs.comment-id }}"
+            Mthe comment
+
         
