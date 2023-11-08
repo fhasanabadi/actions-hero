@@ -1,13 +1,11 @@
-name: Hello world workflow
-
-
+name: Hello-world-workflow
 on:
 	push:
 		branches:
-			- main
+		 - main
 	pull_request:
 		branches:
-			- main
+		 - main
 	workflow_dispatch: # for the sake of testing. you can run it in the platform
 
 jobs:
