@@ -10,4 +10,14 @@ jobs:
       - name: "dump github context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v3
+        id: couc
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            My comment
+      - name: Check outputs
+        run: |
+          echo "Comment ID - ${{ steps.couc.outputs.comment-id }}"
         
