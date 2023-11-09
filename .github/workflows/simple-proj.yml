@@ -28,6 +28,7 @@ jobs:
 
 
   verify:
+    runs-on: ubuntu-latest
     name: verify if statement
     if: ${{ vars.EXEC_WF == 'true' }}
     steps: 
