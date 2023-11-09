@@ -28,7 +28,7 @@ jobs:
 
 
   verify:
-    name: ${{ vars.JOB_NAME }}
+    name: verify if statement
     if: ${{ vars.EXEC_WF == 'true' }}
     steps: 
       - run: |
