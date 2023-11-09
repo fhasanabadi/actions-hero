@@ -39,3 +39,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "This is a push event."
+          else
+            echo "This is not a push event."
+          fi
