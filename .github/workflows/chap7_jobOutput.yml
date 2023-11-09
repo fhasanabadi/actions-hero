@@ -1,0 +1,17 @@
+name: output-from-step
+on:
+  workflow_dispatch:
+
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set debug
+        id: set-debug-stage
+        run: echo "BUILD_STAGE=debug" >> $GITHUB_OUTPUT
+
+      - name: Get stage
+        run: echo "The build stage is ${{ steps.set-debug-stage.output.BUILD_STAGE }}"
+
+        
