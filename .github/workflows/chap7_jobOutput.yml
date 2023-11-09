@@ -11,12 +11,12 @@ jobs:
         id: set-debug-stage
         run: echo "BUILD_STAGE=debug" >> $GITHUB_OUTPUT
       - name: Set debug2
-        id: set-debug-stage
+        id: set-debug-stage2
         run: echo "CustomVar=OREILLY" >> $GITHUB_OUTPUT
 
       - name: Get stage
         run: echo "The build stage is ${{ steps.set-debug-stage.outputs.BUILD_STAGE }} 
       - name: Get stage2
-        run: echo "The build stage is ${{ steps.set-debug-stage.outputs.CustomVar }} 
+        run: echo "The build stage is ${{ steps.set-debug-stage2.outputs.CustomVar }} 
 
         
