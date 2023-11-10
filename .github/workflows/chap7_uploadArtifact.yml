@@ -30,6 +30,5 @@ jobs:
         name: greeting-jar
     - shell: bash
       run: |
-        ls -a
-    - name: Unzip files
-      run: unzip greeting-jar -d . && cat first.html
+        ls -a && cat first.html
+
