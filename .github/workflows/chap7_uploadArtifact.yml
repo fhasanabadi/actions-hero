@@ -31,3 +31,5 @@ jobs:
     - shell: bash
       run: |
         ls -a
+    - name: Unzip files
+      run: unzip greeting-jar -d .
