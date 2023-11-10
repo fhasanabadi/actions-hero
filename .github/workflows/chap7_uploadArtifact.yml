@@ -19,3 +19,15 @@ jobs:
       with:
         name: greeting-jar
         path: ./newfolder
+
+  download:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: download the artifact
+      uses: actions/download-artifacts@v2
+      with:
+        name: greeting-jar
+    - shell: bash
+      run: |
+        ls -a
