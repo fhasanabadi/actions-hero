@@ -14,3 +14,8 @@ jobs:
       run: echo "end of the code so far"
     - name: create a new folder
       run: mkdir newfolder && echo "first.html" >> ./newfolder/first.html && ls -a ./newfolder/ && cat ./newfolder/first.html
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: greeting-jar
+        path: ./newfolder
