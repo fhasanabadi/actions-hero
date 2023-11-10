@@ -25,7 +25,7 @@ jobs:
     needs: build
     steps:
     - name: download the artifact
-      uses: actions/download-artifacts@v2
+      uses: actions/download-artifact@v2
       with:
         name: greeting-jar
     - shell: bash
