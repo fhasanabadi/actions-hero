@@ -1,4 +1,4 @@
-name: CI without cache
+name: ci without cache
 
 on: 
   workflow_dispatch:
