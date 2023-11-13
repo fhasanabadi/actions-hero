@@ -1,0 +1,9 @@
+on:
+  issues:
+
+jobs:
+  notify-for-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "something happenned with an issue" 
