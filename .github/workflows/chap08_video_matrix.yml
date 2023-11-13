@@ -19,9 +19,12 @@ jobs:
           echo test, and deploy your project
 
   call-workflow-in-local-repo:
-
+    strategy:
+      matrix:
+        nodeversion: [14, 16, 18, 20]
     uses: ./.github/workflows/chap08_matrix_reusableWorkflow.yml
     with:
-      node: 8
+      #node: 8
+      node: ${{ matrix.nodeversion }}
       
   
