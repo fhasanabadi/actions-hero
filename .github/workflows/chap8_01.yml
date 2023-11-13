@@ -1,3 +1,4 @@
+name: trigger with issue
 on:
   issues:
 
