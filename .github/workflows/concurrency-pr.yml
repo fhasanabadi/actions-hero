@@ -1,6 +1,6 @@
 ## for concurrency of pull requests, it waits if the previous PRs are finished, then trying to run the next PR
 
-
+# for more watch this playlist on youtube: https://www.youtube.com/watch?v=PZ_A0QiLvz8&list=PLiO7XHcmTsleGRnjT2o0ILzXUkzFJ87eR&index=2
 name: Concurrency PR
 
 
