@@ -1,0 +1,13 @@
+name: workflow-run
+
+
+on: 
+  workflow_run:
+  # if pipeline workflow completes, this one get triggered.
+  
+    workflows: ["Pipeline"]
+    types: [ completed ]
+    branches:
+      - 'rel/**'
+      - '!rel/**-preprod'
+    
