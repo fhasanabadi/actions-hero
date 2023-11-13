@@ -16,5 +16,5 @@ jobs:
       - name: Output the input value
 
         run: |
-          echo "the node versiong to use is: ${{ inputs.node }}
+          echo "the node versiong to use is: ${{ inputs.node }}"
           
