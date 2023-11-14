@@ -1,0 +1,28 @@
+name: Conditional workflow
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version of Docker image'
+        required: false
+
+jobs:
+  conditional-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run if input exist
+        run: echo "run this step if the input exists
+        if: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            echo "Run -------> with an input"
+            # Add your conditional steps here based on the existence of the input
+          else
+            echo "Run ------> without an input"
+            # Add your conditional steps here for the case where the input is not provided
+          fi
