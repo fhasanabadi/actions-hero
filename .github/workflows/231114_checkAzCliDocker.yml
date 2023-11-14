@@ -7,9 +7,9 @@ jobs:
   check-versions:
     runs-on: ubuntu-latest
 
-  steps:
-  - name: Check Az CLI version
-    run: az --version
-
-  - name: Check Docker version
-    run: docker --version
+    steps:
+    - name: Check Az CLI version
+      run: az --version
+  
+    - name: Check Docker version
+      run: docker --version
