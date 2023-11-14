@@ -17,8 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run if input exist
-        run: echo "run this step if the input exists
-        if: |
+        run: 
+           |
           if [ -n "${{ github.event.inputs.version }}" ]; then
             echo "Run -------> with an input"
             # Add your conditional steps here based on the existence of the input
