@@ -12,4 +12,4 @@ jobs:
       run: az --version
   
     - name: Check Docker version
-      run: docker --version
+      run: docker --version  && docker build --help && docker buildx --help
